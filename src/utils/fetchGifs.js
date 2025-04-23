@@ -1,6 +1,9 @@
+
+const apiKey = import.meta.env.VITE_GIF_API_KEY;
+
 // Logica JS
 export const fetchGifs = async (category) => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=0SPaTrvUkwzhrPZdbqmbN58M06XPhwlQ&q=${category}}`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${category}}`;
     const resp = await fetch(url);
     const { data }= await resp.json(); // Destructuracion de resp.data usando {data}
     
